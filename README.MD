@@ -42,7 +42,7 @@
 
 ## Структура проекта
 
-    repo/
+    example/
     ├── src/
     │   ├── main/
     │   │   └── java/
@@ -63,9 +63,9 @@
 ## Автор
 
 Имя Фамилия
-GitHub: github.com/username
-Telegram: @username
-Email: mail@example.com
+GitHub: github.com/username  
+Telegram: @username  
+Email: mail@example.com  
 
 ## Лицензия
 

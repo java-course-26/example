@@ -1,4 +1,4 @@
-package src.main.java;
+package src.main.java.lessons.ex1;
 
 public class ArrayDemo {
     public static void main(String[] args) {

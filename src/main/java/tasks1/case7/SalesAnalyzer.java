@@ -22,8 +22,10 @@ public class SalesAnalyzer {
             }
         }
         
-        double minSale = 0;
-        for (int i = 0; i < sales.length; i++) {
+        double minSale = 0;//** установили начальное значение minsale=0.Поскольку все
+        // элементы массива больше нуля, условие никогда не выполниться
+        for (int i = 0; i < sales.length; i++) {// если мы считаем minsale первым элемнтом sales[0],то цикл
+            //можно начинать с int=1 , а не с 0, чтобы не сравнивать первый элемент сам с собой
             if (sales[i] < minSale) {
                 minSale = sales[i];
             }
@@ -34,3 +36,5 @@ public class SalesAnalyzer {
         System.out.println("Минимальная выручка: " + minSale);
     }
 }
+//Использование 3 циклов for избыточно,снижает производительность
+//Все 3 операции можно выполнить внутри 1 единственного цикла

@@ -12,17 +12,17 @@ public class SalesAnalyzer {
         
         double totalSum = 0;
         for (int i = 0; i < sales.length; i++) {
-            totalSum = totalSum + sales[i];
+            totalSum += sales[i];
         }
         
         int goodDays = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > 10000) {
-                goodDays = goodDays + 1;
+                goodDays ++;
             }
         }
         
-        double minSale = 0;
+        double minSale = sales[0];
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < minSale) {
                 minSale = sales[i];

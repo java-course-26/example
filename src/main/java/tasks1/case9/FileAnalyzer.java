@@ -13,8 +13,8 @@ public class FileAnalyzer {
 
         boolean isFound = false;
         for (int i = 0; i < files.length; i++) {
-            if (files[i] == targetFile) { 
-                isFound = true;
+            if (files[i] == targetFile) { //оператор == сравнивает ссылки на объекты,а не их содержимое.сравнение files[i] == targetFile всегда будет возвращать false
+                isFound = true;//нужно использовать .equals()
             }
         }
         
@@ -26,7 +26,7 @@ public class FileAnalyzer {
 
         int txtCount = 0;
         for (int i = 0; i < files.length; i++) {
-            if (files[i].substring(files[i].length() - 4) == ".txt") {
+            if (files[i].substring(files[i].length() - 4) == ".txt") {// та же ошибка, что и в 16 строчке ,исправление с помощью .endsWith(),т.к если длина будет слишком короткое,будет ошибка
                 txtCount = txtCount + 1;
             }
         }
@@ -34,7 +34,7 @@ public class FileAnalyzer {
 
         String shortestFile = "";
         for (int i = 0; i < files.length; i++) {
-            if (files[i].length() < shortestFile.length()) {
+            if (files[i].length() < shortestFile.length()) {// т.к переменная введена как пустая строка(длина 0), то условие никогда не выполниться и программа выдаст пустой результат
                 shortestFile = files[i];
             }
         }

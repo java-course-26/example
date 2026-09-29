@@ -13,21 +13,21 @@ public class RaceAnalyzer {
 
         double best = 0; 
         for (int i = 0; i < times.length; i++) {
-            if (times[i] < best) {
+            if (times[i] > best) {
                 best = times[i];
             }
         }
 
-        double worst = 0;
+        double worst = 100;
         for (int i = 0; i < times.length; i++) {
-            if (times[i] > worst) {
+            if (times[i] < worst) {
                 worst = times[i];
             }
         }
 
         int goodRunners = 0;
         for (int i = 0; i < times.length; i++) {
-            if (times[i] < 45.0) { 
+            if (times[i] > 45.0) { 
                 goodRunners++;
             }
         }

@@ -13,7 +13,7 @@ public class AttendanceAnalyzer {
         int absences = 0;
         for (int i = 0; i < attendance.length; i++) {
             if (attendance[i] == 0) {
-                absences = absences + 1;
+                absences++;
             }
         }
         
@@ -21,14 +21,15 @@ public class AttendanceAnalyzer {
         double percent = (double) present / attendance.length * 100;
         
         boolean hasDoubleAbsence = false;
-        for (int i = 0; i < attendance.length; i++) {
+        for (int i = 0; i < attendance.length - 1; i++) {
             if (attendance[i] == 0 && attendance[i + 1] == 0) {
                 hasDoubleAbsence = true;
+                break;
             }
         }
         
         System.out.println("Всего пропусков: " + absences);
-        System.out.println("Посещаемость: " + percent + "%");
+        System.out.printf("Посещаемость: %.1f%%\n", percent)
         System.out.println("Были двойные пропуски: " + hasDoubleAbsence);
     }
 }
